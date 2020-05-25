@@ -47,6 +47,12 @@ return [
             'hash' => false,
             'input_key' => 'token',
         ],
+
+
+        'admins' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ]
     ],
 
     /*
@@ -76,6 +82,13 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Admin::class,
+            'table'=>'admins'
+        ],
+
     ],
 
     /*
@@ -98,6 +111,12 @@ return [
             'provider' => 'users',
             'table' => 'password_resets',
             'expire' => 60,
+        ],
+
+        'admins' => [
+            'provider' => 'admins',
+            'table' => 'password_resets',
+            'expire' => 100,
         ],
     ],
 

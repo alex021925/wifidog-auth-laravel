@@ -50,4 +50,13 @@ class ProfileController extends Controller
         $user->update($request->all());
         return redirect(route('profile.edit'));
     }
+
+
+    public function perfil()
+    {
+        $user = auth()->user();
+        $social_login_providers = config('auth.social_login.providers');
+        $linked_providers = SocialAccount::where('user_id', $user->id)->select(['provider'])->pluck('provider')->all();
+        return view('settings.perfil', compact('user', 'social_login_providers', 'linked_providers'));
+    }
 }
