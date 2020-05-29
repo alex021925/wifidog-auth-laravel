@@ -1,15 +1,9 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: Tabares
- * Date: 29/05/2020
- * Time: 12:29
- */
 use Illuminate\Database\Seeder;
 use App\Admin;
 
-class AdminTable extends Seeder
+class AdminTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
