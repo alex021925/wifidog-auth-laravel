@@ -25,20 +25,15 @@
     <figure>
         <div class="logo col-md-2">
 
-            <img src="{{asset('img/wifigratis.png')}}" width="auto" height="auto"  alt="" />
+            <img src="{{asset('img/portal2.png')}}" width="180px" height="120px"  alt="" />
         </div>
 
 
     </figure>
 
-    <div class="">
-    </div>
 </header>
 
-<div class="comprar">
-
-</div>
-<nav class="navbar navbar-fixed-top navbar-inverse col-md-11 " style="margin-left:60px; " role="navigation">
+<nav class="navbar navbar-fixed-top navbar-inverse col-md-11 " style="margin-left:60px; margin-top: -20px " role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
