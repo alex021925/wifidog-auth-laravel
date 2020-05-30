@@ -86,8 +86,9 @@
                                 <ul class="nav justify-content-center" >
                                     @foreach ($social_login['providers'] as $provider)
                                         <li class="nav-item mr-2" >
-                                            <a  class="nav-link btn {{ $errors->has($provider) ? 'btn-danger' : 'btn-primary' }}" href="/login/{{ strtolower(str_replace('_', '-', $provider)) }}" role="button">{{ __($provider) }}</a>
+                                            <a style="width: 100px;text-align: center" class="nav-link btn {{ $errors->has($provider) ? 'btn-danger' : 'btn-primary' }}" href="/login/{{ strtolower(str_replace('_', '-', $provider)) }}" role="button">{{ __($provider) }}</a>
                                         </li>
+
                                     @endforeach
                                 </ul>
                             </div>
