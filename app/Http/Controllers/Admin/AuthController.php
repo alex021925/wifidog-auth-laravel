@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Tabares
@@ -13,8 +14,8 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class AuthController extends Controller {
-
+class AuthController extends Controller
+{
     use AuthenticatesUsers;
 
     protected $guard = 'admins';
@@ -29,29 +30,24 @@ class AuthController extends Controller {
         return view('admin.login');
     }
 
-    public  function login(Request $request)
+    public function login(Request $request)
     {
 //        if(Auth::attempt(['email'=>$request->email,'password'=>$request->password]))
-        if(Auth::guard('admins')->attempt(['email'=>$request->email,'password'=>$request->password]))
-        {
+        if (Auth::guard('admins')->attempt(['email' => $request->email,'password' => $request->password])) {
             return view('admin.panel');
-
         }
         return view('admin.login');
-
     }
 
     public function ShowRegistrationForm()
     {
         return view('admin.register');
-
     }
 
     public function _construct()
     {
         $this->middleware('auth');
         $this->middleware('admin');
-
     }
     public function logout_admin(Request $request)
     {
