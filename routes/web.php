@@ -22,3 +22,20 @@ Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 Route::get('settings/profile', 'Settings\ProfileController@edit')->name('profile.edit');
 Route::put('settings/profile', 'Settings\ProfileController@update')->name('profile.update');
+Route::get('perfil', 'ProfileController@perfil');
+
+
+Route::group(['middleware'    => ['web']
+], function () {
+
+    Route::get('/admin/login', 'App\Http\Controllers\Admin\AuthController@showLoginForm');
+    Route::post('/admin/login', 'App\Http\Controllers\Admin\AuthController@login');
+    Route::get('/admin/logout', 'Admin\AuthController@logout');
+
+    Route::get('/admin', 'AdminController@index');
+
+
+});
+
+
+

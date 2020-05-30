@@ -10,6 +10,7 @@
         <!-- Styles -->
         <style>
             html, body {
+                background-image: url("img/fondo.jpg");
                 background-color: #fff;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
@@ -89,7 +90,7 @@
 
                 <div class="links">
                     <a href="http://dev.wifidog.org/wiki/doc/developer/WiFiDogProtocol_V1">Documentation</a>
-                    <a href="https://github.com/wifidog/wifidog-auth-laravel">GitHub</a>
+                    {{--<a href="https://github.com/wifidog/wifidog-auth-laravel"></a>--}}
                 </div>
             </div>
         </div>

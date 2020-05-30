@@ -1,0 +1,156 @@
+#img  {
+
+    margin-top: 50px !important;
+    margin-left: 250px !important;
+    width: 300px;
+    background: darkgrey;
+    position: relative;
+
+}
+.cabecera
+{
+    height: 100px;
+}
+@media screen and (min-width: 200px) {
+    article .botones
+    {
+        width: 150px;
+        margin-left: 0px !important;
+
+
+    }
+}
+
+@media screen and (min-width: 200px) {
+    article #img
+    {
+        width: 20%;
+        height: 2% !important;
+        margin-left: 0px !important;
+
+
+    }
+}
+@media screen and (max-width: 768px) {
+    article #img
+    {
+        width: 150px;
+        margin-left: 190px !important;
+
+
+    }
+}
+@media screen and (min-width: 768px) {
+    article .botones
+    {
+        width: 150px;
+        margin-left: 140px !important;
+
+
+    }
+}
+
+article
+{
+    margin-top: 140px;
+    margin-left: 10%;
+
+}
+
+article .botones
+{
+    width: 150px;
+    margin-top: 20px;
+
+
+}
+.img {
+
+    margin-top: 20px !important;
+    margin-left: 10%;
+    background-color: grey;
+}
+.parrafo1
+{
+    margin-left: 10%;
+    font-style: inherit;
+    font-family: bold;
+}
+.parrafo
+{
+    margin-top: 10px;
+    margin-left: 10% !important;
+    font-style: inherit;
+    font-family: bold;
+}
+.parra{
+    position: fixed !important;
+    color: white;
+}
+@media screen and (max-width: 768px) {
+    parrafo {
+        margin-top: 10px;
+        margin-left: 20% !important;
+        font-style: inherit;
+        font-family: bold;
+
+    }
+}
+    @media screen and (min-width: 200px) {
+    parrafo
+    {
+        margin-left: 0px !important;
+
+
+    }
+}
+
+.footer {
+    background-color: grey !important;
+    font-family: Arial;
+
+}
+.footer h5 {
+    color: #d0e9c6;
+    font-size: 14px;
+
+}
+.footer a {
+    color: #b0b38f;
+    font-size: 12px;
+}
+.footer .pie
+{
+    margin-left: 50px;
+    border: 1px white;
+}
+
+.copyright {
+    color: white !important;
+    font-size: 12px;
+    text-align: center !important;
+    margin-left: 200px;
+}
+.footer hr
+{
+    margin-left: 50px;
+}
+.selec h5
+{
+    color: #00B0A0 !important;
+    font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+    .login
+    {
+        position: relative;
+        margin-left: 0px !important;
+
+
+    }
+ .contenido
+ {
+     background-image: url("img/fondo.jpg") !important;
+
+ }
+}
