@@ -28,9 +28,9 @@ Route::get('perfil', 'ProfileController@perfil');
 Route::group(['middleware'    => ['web']
 ], function () {
 
-    Route::get('/admin/login', 'App\Http\Controllers\Admin\AuthController@showLoginForm');
-    Route::post('/admin/login', 'App\Http\Controllers\Admin\AuthController@login');
-    Route::get('/admin/logout', 'Admin\AuthController@logout');
+    Route::get('/admin/login', 'Admin\AuthController@showLoginForm');
+    Route::post('/admin/login', 'Admin\AuthController@login');
+    Route::post('/admin/logout', 'Admin\AuthController@logout_admin');
 
     Route::get('/admin', 'AdminController@index');
 

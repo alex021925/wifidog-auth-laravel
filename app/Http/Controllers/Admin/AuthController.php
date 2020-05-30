@@ -53,5 +53,12 @@ class AuthController extends Controller {
         $this->middleware('admin');
 
     }
+    public function logout_admin(Request $request)
+    {
+        $this->guard()->logout();
 
+        $request->session()->invalidate();
+
+        return $this->loggedOut($request) ?: redirect('/admin');
+    }
 }
