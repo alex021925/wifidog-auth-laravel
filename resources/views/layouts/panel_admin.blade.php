@@ -58,21 +58,21 @@
                 <ul class="nav   navbar-nav  side-nav" >
 
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-folder-open"></i> Tienda <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-folder-open"></i> Usuarios<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ url('/admin/tiendas')}}"> Listado de Tiendas</a></li>
+                            <li><a href="{{ url('/admin/tiendas')}}"> Listado de Usuarios</a></li>
 
                         </ul>
                     </li>
 
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-folder-open"></i> Departamento <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ url('/admin/departamentos')}}"> Listado departamentos</a></li>
+                    {{--<li class="dropdown">--}}
+                        {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-folder-open"></i> Departamento <b class="caret"></b></a>--}}
+                        {{--<ul class="dropdown-menu">--}}
+                            {{--<li><a href="{{ url('/admin/departamentos')}}"> Listado departamentos</a></li>--}}
 
-                        </ul>
-                    </li>
-                    <li><a href="{{ url('/admin/secciones') }}"><i class="icon-bar-chart"></i> Secciones</a></li>
+                        {{--</ul>--}}
+                    {{--</li>--}}
+                    {{--<li><a href="{{ url('/admin/secciones') }}"><i class="icon-bar-chart"></i> Secciones</a></li>--}}
                     {{--<li><a href=""><i class="icon-font"></i> Typography</a></li>--}}
 
                     {{--<li><a href=""><i class="icon-wrench"></i> Otros Gastos</a></li>--}}
