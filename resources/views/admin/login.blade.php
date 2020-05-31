@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="col-md-3 py-md-5 py-4  pl-lg-3" style=" border:2px solid #0072bc;float: right;text-align: center ;position:relative;background-color: white;">
-        <img  src="{{asset('img/wifigratis.png')}}" width="60px">
+        <img style="margin-bottom: -20px" src="{{asset('img/portal2.png')}}" width="90px">
         <h5 class="heading" >Panel de Administración </h5>
 
         <form method="POST" action="{{ url('/admin/login') }}" style="background-color: white" >

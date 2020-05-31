@@ -34,6 +34,9 @@ Route::group(['middleware'    => ['web']
 
     Route::get('/admin', 'AdminController@index');
 
+    //consumidores
+    Route::get('/admin/consumidores', 'ConsumidorController@consumidores');
+//
 
 });
 

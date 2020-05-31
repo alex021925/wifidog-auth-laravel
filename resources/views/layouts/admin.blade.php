@@ -25,7 +25,7 @@
     <figure>
         <div class="logo col-md-2">
 
-            <img src="{{asset('img/portal2.png')}}" width="180px" height="120px"  alt="" />
+            <img style="margin-top: -30px" src="{{asset('img/portal2.png')}}" width="180px" height="120px"  alt="" />
         </div>
 
 
