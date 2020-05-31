@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Tabares
@@ -6,22 +7,20 @@
  * Time: 12:13
  */
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
     // use AuthenticatesUsers;
-    public function _construct()
+    public function __construct()
     {
         $this->middleware('admin');
     }
+
     public function index()
     {
-        return view('admin.login');
+        return view('admin.panel');
     }
-
 }

@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'Welcome');
+Route::get('/', 'Welcome')->name("welcome");
 
 Auth::routes(config('auth.options') ?? []);
 
@@ -25,17 +25,22 @@ Route::put('settings/profile', 'Settings\ProfileController@update')->name('profi
 Route::get('perfil', 'ProfileController@perfil');
 
 
-Route::group(['middleware'    => ['web']
-], function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin'], function () {
 
-    Route::get('/admin/login', 'Admin\AuthController@showLoginForm');
-    Route::post('/admin/login', 'Admin\AuthController@login');
-    Route::post('/admin/logout', 'Admin\AuthController@logout_admin');
+    Route::get('login', [
+        'middleware' => 'admin.guest',
+        'as' => 'login',
+        'uses' => 'AuthController@showLoginForm']);
 
-    Route::get('/admin', 'AdminController@index');
+    Route::post('login', [
+        'as' => 'login.post',
+        'uses' => 'AuthController@login']);
 
+    Route::post('logout', [
+        'as' => 'logout',
+        'uses' => 'AuthController@logout']);
 
+    Route::get('/', [
+        'as' => 'home',
+        'uses' => 'AdminController@index']);
 });
-
-
-
