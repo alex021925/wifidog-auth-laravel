@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Tabares
@@ -13,52 +14,41 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class AuthController extends Controller {
-
+class AuthController extends Controller
+{
     use AuthenticatesUsers;
 
     protected $guard = 'admins';
     protected $redirectTo = '/admin';
 
-
-    public function showLogin()
+    /**
+     * Show the application's login form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showLoginForm()
     {
-//        if(!view()->exists('auth.login')) {
-//            return view('auth.login');
-//        }
         return view('admin.login');
     }
 
-    public  function login(Request $request)
+    /**
+     * Get the guard to be used during authentication.
+     *
+     * @return \Illuminate\Contracts\Auth\StatefulGuard
+     */
+    protected function guard()
     {
-//        if(Auth::attempt(['email'=>$request->email,'password'=>$request->password]))
-        if(Auth::guard('admins')->attempt(['email'=>$request->email,'password'=>$request->password]))
-        {
-            return view('admin.panel');
-
-        }
-        return view('admin.login');
-
+        return Auth::guard('admins');
     }
 
-    public function ShowRegistrationForm()
+    /**
+     * The user has logged out of the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return mixed
+     */
+    protected function loggedOut(Request $request)
     {
-        return view('admin.register');
-
-    }
-
-    public function _construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('admin');
-
-    }
-    public function logout_admin(Request $request)
-    {
-        $this->guard()->logout();
-
-        $request->session()->invalidate();
-
-        return $this->loggedOut($request) ?: redirect('/admin');
+        return redirect()->route("welcome");
     }
 }
