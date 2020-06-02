@@ -13,7 +13,7 @@ use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
 {
-    // use AuthenticatesUsers;
+
     public function __construct()
     {
         $this->middleware('admin');
