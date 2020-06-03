@@ -7,12 +7,14 @@
             <h1 class="page-header"></h1>
         </div>
         <div class="col-sm-12">
-            {{--<div class="align-content-left">--}}
+            <div class="align-content-left">
 
-            {{--<a href="#" class="btn btn-primary icon-ok" data-toggle="modal" data-target="#create">Crear Departamento</a>--}}
-            {{--<br>--}}
-            {{--<br>--}}
-            {{--</div>--}}
+                <a href="{{url('/admin/facebook_filtro')}}"  title="Filtrar con Facebook"><img class="filtro"  src="{{url('img/facebook-logo.png')}}"> </a>
+                <a class="btn-" href="{{url('/admin/google_filtro')}}"  title="Filtrar con Google"><img class="filtro" src="{{url('img/google-plus-logo.png')}}"> </a>
+
+                <br>
+                <br>
+            </div>
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="panel panel-primary">
@@ -28,6 +30,7 @@
                                     <table id="consumidores" class="table table-hover table-bordered  bbottom display no-wrap">
                                         <thead>
                                         <tr>
+                                            <th></th>
                                             <th  >Nombre</th>
                                             <th  >Usuario</th>
                                             <th  >Consumidor</th>
@@ -41,12 +44,17 @@
                                         @foreach($linked_providers as $usuario)
 
                                             <tr>
+                                                @if($usuario->provider=="Facebook")
+                                                    <td><img class="img-circle" src="{{url('img/facebook-logo.png')}}"></td>
+                                                @endif
+                                                @if($usuario->provider=="Google")
+                                                    <td><img class="img-circle" src="{{url('img/google-plus-logo.png')}}"></td>
+                                                @endif
                                                 <td >{{ $usuario->name }}</td>
                                                 <td >{{ $usuario->nickname }}</td>
-                                                @if($usuario->provider=='Facebook')
-                                                    <td ><i class="icon-facebook"></i>{{ $usuario->provider }}</td>
+                                                <td>{{ $usuario->provider }}</td>
 
-                                                @endif
+
 
                                                 {{--<td>--}}
                                                 {{--<a class="btn btn-warning icon-fullscreen" href="{{ url('/admin/detalles_departamento/') . '/' . $departamento->departamento}}"> Detalles</a>--}}

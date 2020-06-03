@@ -47,7 +47,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">Panel Administracion</a>
+            <a class="navbar-brand" href="#">Panel Administracion</a>
         </div>
         <!-- /.navbar-header -->
 
