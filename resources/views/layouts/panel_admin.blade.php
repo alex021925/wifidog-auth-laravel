@@ -60,7 +60,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-folder-open"></i> Consumidores<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ url('/admin/consumidores')}}"> Listado de Usuarios</a></li>
+                            <li><a href="{{ url()->route("admin.consumers")}}"> Listado de Usuarios</a></li>
 
                         </ul>
                     </li>
@@ -85,7 +85,7 @@
         </div>
         <ul class="nav navbar-nav  navbar-right">
             <li class="dropdown alerts-dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i>    {{ Auth::guard('admins')->user()->name }} <b class="caret"></b></a>
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i>    {{ Auth::guard('admins')->user()->name?:"" }} <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href=""><i class="icon-user"></i> Perfil</a></li>
                     <li class="divider"></li>

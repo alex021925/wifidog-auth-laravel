@@ -36,7 +36,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin'], fu
         'as' => 'login.post',
         'uses' => 'AuthController@login']);
 
-//
+
     Route::post('logout', [
         'as' => 'logout',
         'uses' => 'AuthController@logout']);
@@ -47,11 +47,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin'], fu
 
 
     //consumidores
-    Route::get('consumidores', [
-        'as'=>'consumidores',
-        'uses'=>'ConsumidorController@consumidores'
 
-    ]);
+    Route::get('consumers', [
+        'as' => 'consumers',
+        'uses' => 'ConsumerController@consumers']);
 
 
     Route::get('google_filtro', [
