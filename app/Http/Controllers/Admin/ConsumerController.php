@@ -25,4 +25,22 @@ class ConsumerController extends Controller
         $linked_providers = DB::table('social_accounts')->paginate(10);
         return view('usuario/dashboard_usuario', ['linked_providers' => $linked_providers]);
     }
+
+    public function googleFilter()
+    {
+        $google_providers = DB::table('social_accounts')
+            ->where('provider', '=', 'Google')
+            ->paginate(10);
+        return view('usuario/dashboard_usuario', ['linked_providers' => $google_providers]);
+    }
+
+
+    public function facebookFilter()
+    {
+        $facebook_providers = DB::table('social_accounts')
+            ->where('provider', '=', 'Facebook')
+            ->paginate(10);
+
+        return view('usuario/dashboard_usuario', ['linked_providers' => $facebook_providers]);
+    }
 }

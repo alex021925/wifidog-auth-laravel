@@ -9,8 +9,8 @@
         <div class="col-sm-12">
             <div class="align-content-left">
 
-                <a href="{{url('/admin/facebook_filtro')}}"  title="Filtrar con Facebook"><img class="filtro"  src="{{url('img/facebook-logo.png')}}"> </a>
-                <a class="btn-" href="{{url('/admin/google_filtro')}}"  title="Filtrar con Google"><img class="filtro" src="{{url('img/google-plus-logo.png')}}"> </a>
+                <a href="{{ url()->route("admin.consumers.facebook") }}"  title="Filtrar con Facebook"><img class="filtro"  src="{{url('img/facebook-logo.png')}}"> </a>
+                <a class="btn-" href="{{ url()->route("admin.consumers.google") }}"  title="Filtrar con Google"><img class="filtro" src="{{url('img/google-plus-logo.png')}}"> </a>
 
                 <br>
                 <br>
