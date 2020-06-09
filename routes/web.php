@@ -53,18 +53,15 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin'], fu
         'uses' => 'ConsumerController@consumers']);
 
 
-    Route::get('google_filtro', [
-        'as'=>'google_filtro',
-        'uses'=>'ConsumidorController@filtro_google'
+    Route::get('consumers/google', [
+        'as' => 'consumers.google',
+        'uses' => 'ConsumerController@googleFilter'
 
     ]);
 
-    Route::get('facebook_filtro', [
-        'as'=>'facebook_filtro',
-        'uses'=>'ConsumidorController@filtro_facebook'
+    Route::get('consumers/facebook', [
+        'as' => 'consumers.facebook',
+        'uses' => 'ConsumerController@facebookFilter'
 
     ]);
 });
-
-
-
