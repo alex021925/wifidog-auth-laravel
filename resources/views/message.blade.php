@@ -30,7 +30,7 @@
                         <div class="card-body">
                             @if (!empty($msg))
                                 <div class="alert alert-warning" role="alert">
-                                    {{ __($msg) }}
+                                    {{ __($msg1) }}
                                 </div>
                             @endif
                         </div>

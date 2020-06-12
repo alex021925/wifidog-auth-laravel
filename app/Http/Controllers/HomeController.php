@@ -24,7 +24,7 @@ class HomeController extends Controller
         $user = auth()->user();
         $token = $user->api_token;
         $data = [
-            'msg' => 'auth.logged_in',
+            'msg' => 'auth.logged_in','msg1'=>'Bienvenido al Portal Wifi',
         ];
         if (session('gw_address') && session('gw_port')) {
             $data['wifidog_uri'] = "http://{session('gw_address')}:{session('gw_port')}/wifidog/auth?token={$token}";

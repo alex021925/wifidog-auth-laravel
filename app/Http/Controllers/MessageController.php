@@ -21,7 +21,7 @@ class MessageController extends Controller
             'message' => 'required|string|in:denied,activate,failed_validation',
         ]);
         return view('message', [
-            'msg' => 'auth.' . $request->input('message'),
+            'msg' => 'auth.' . $request->input('message'),'msg1'=>'Bienvenido al Portal Wifi',
         ]);
     }
 }

@@ -5,12 +5,12 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('dashboard') }}</div>
+                <div class="card-header">{{ __('Seta') }}</div>
 
                 <div class="card-body">
                     @if (!empty($msg))
                         <div class="alert alert-info" role="alert">
-                            {{ __($msg) }}
+                            {{ __($msg1) }}
                         </div>
                     @endif
 

@@ -13,7 +13,7 @@
                             @method('PUT')
 
                             <div class="form-group row">
-                                @if ($user->avatar)
+                                @if (!empty($user->avatar))
                                     <label for="avatar" class="col-md-4 col-form-label text-md-right">{{ __('Avatar') }}</label>
                                     <div class="col-md-6">
                                         <img class="img-thumbnail p-3" src="{{ $user->avatar }}" alt="{{ $user->name }} avatar">

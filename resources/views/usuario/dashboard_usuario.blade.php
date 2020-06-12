@@ -30,7 +30,7 @@
                                     <table id="consumidores" class="table table-hover table-bordered  bbottom display no-wrap">
                                         <thead>
                                         <tr>
-                                            <th></th>
+                                            <th>Icon</th>
                                             <th  >Nombre</th>
                                             <th  >Usuario</th>
                                             <th  >Consumidor</th>
