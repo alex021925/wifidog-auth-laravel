@@ -45,10 +45,10 @@
 
                                             <tr>
                                                 @if($usuario->provider=="Facebook")
-                                                    <td><img class="img-circle" src="{{url('img/facebook-logo.png')}}"></td>
+                                                    <td><img class="img-circle" src="{{asset('img/facebook-logo.png')}}"></td>
                                                 @endif
                                                 @if($usuario->provider=="Google")
-                                                    <td><img class="img-circle" src="{{url('img/google-plus-logo.png')}}"></td>
+                                                    <td><img class="img-circle" src="{{asset('img/google-plus-logo.png')}}"></td>
                                                 @endif
                                                 <td >{{ $usuario->name }}</td>
                                                 <td >{{ $usuario->nickname }}</td>

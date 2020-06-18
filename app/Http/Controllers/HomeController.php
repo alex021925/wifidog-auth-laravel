@@ -31,4 +31,29 @@ class HomeController extends Controller
         }
         return view('home', $data);
     }
+
+    public function google()
+    {
+
+
+
+        return redirect()->to('https://www.google.com');
+    }
+
+    public function gmail()
+    {
+
+
+
+        return redirect()->to('https://www.mail.google.com');
+    }
+
+    public function facebook()
+    {
+
+
+
+        return redirect()->to('https://www.facebook.com');
+    }
+
 }

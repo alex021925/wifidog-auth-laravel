@@ -65,3 +65,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin'], fu
 
     ]);
 });
+
+Route::get('/google', 'HomeController@google')->name('google');
+Route::get('/gmail', 'HomeController@gmail')->name('gmail');
+Route::get('/facebook', 'HomeController@facebook')->name('facebook');

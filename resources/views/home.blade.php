@@ -17,6 +17,23 @@
                     @if (!empty($wifidog_uri))
                     <a class="btn btn-success" href={{ $wifidog_uri }}>start internet</a>
                     @endif
+                        <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-4 thumb" align="center">
+                        <a href="{{url('google')}}" target="_blank">
+                       <img src="{{asset('img/google.png')}}" height="120px"></a>
+
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-4 thumb" align="center">
+                            <a href="{{url('facebook')}}" target="_blank">
+                                <img src="{{asset('img/facebook.png')}}" height="120px"></a>
+
+                        </div>
+                            <div class="col-lg-3 col-md-4 col-sm-4 thumb" align="center">
+                                <a href="{{url('gmail')}}" target="_blank">
+                                    <img src="{{asset('img/gmail.jpg')}}" height="120px" ></a>
+
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
