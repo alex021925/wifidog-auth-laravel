@@ -33,6 +33,7 @@
                                             <th>Icon</th>
                                             <th  >Nombre</th>
                                             <th  >Usuario</th>
+                                            <th  >Correo</th>
                                             <th  >Consumidor</th>
 
 
@@ -52,6 +53,7 @@
                                                 @endif
                                                 <td >{{ $usuario->name }}</td>
                                                 <td >{{ $usuario->nickname }}</td>
+                                                <td >{{ $usuario->email }}</td>
                                                 <td>{{ $usuario->provider }}</td>
 
 
