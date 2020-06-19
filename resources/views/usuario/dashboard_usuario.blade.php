@@ -45,10 +45,10 @@
                                         @foreach($linked_providers as $usuario)
 
                                             <tr>
-                                                @if($usuario->provider=="Facebook")
+                                                @if($usuario->provider=="facebook")
                                                     <td><img class="img-circle" src="{{asset('img/facebook-logo.png')}}"></td>
                                                 @endif
-                                                @if($usuario->provider=="Google")
+                                                @if($usuario->provider=="google")
                                                     <td><img class="img-circle" src="{{asset('img/google-plus-logo.png')}}"></td>
                                                 @endif
                                                 <td >{{ $usuario->name }}</td>
