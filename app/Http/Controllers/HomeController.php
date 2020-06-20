@@ -45,7 +45,7 @@ class HomeController extends Controller
 
 
 
-        return redirect()->to('https://www.mail.google.com');
+        return redirect()->to('https://mail.google.com');
     }
 
     public function facebook()
