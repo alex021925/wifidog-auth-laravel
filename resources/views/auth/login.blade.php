@@ -51,9 +51,6 @@
 
 
                         </div>
-                        <div class="form-group enviar">
-                            <button type="submit" class="form-control submit px-3 btn-default ">REGÍSTRATE</button>
-                        </div>
 
 
 
